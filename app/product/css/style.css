@@ -1,4 +1,7 @@
 h1 {
-  color: white; }
+  color: red; }
   h1:hover {
     color: blue; }
+
+p {
+  color: blue; }
