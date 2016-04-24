@@ -1,11 +1,22 @@
+// h1
+//
+// :hover - hoverすると青になり右に10px動きます
+//
+// Markup:
+// <h1>サンプル</h1>
+//
+// Styleguide 1.0
+
 h1 {
     color: red;
+    transition: 200ms ease-out transform;
     &:hover {
         color: blue;
+        transform: translate(10px, 0);
     }
 }
 
 p {
-  color: blue;
+  color: green;
 }
 

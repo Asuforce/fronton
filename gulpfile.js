@@ -3,10 +3,18 @@ var sass = require('gulp-sass');
 var htmlhint = require('gulp-htmlhint');
 var browserSync = require('browser-sync');
 var autoprefixer = require('gulp-autoprefixer');
+var styleguide = require('sc5-styleguide');
 
 gulp.task('sass', function() {
     gulp.src('app/src/sass/*.scss')
-      .pipe(sass())
+/*      .pipe(styleguide.generate({
+          title: 'fronton styleguide',
+          server: true,
+          rootPath: 'app/product/css/',
+          overviewPath: 'app/src/sass/overview.md'
+         }))
+*/      .pipe(sass())
+//      .pipe(styleguide.applyStyles())
       .pipe(autoprefixer())
       .pipe(gulp.dest('app/product/css'))
       .pipe(browserSync.stream());
